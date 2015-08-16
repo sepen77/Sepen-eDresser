@@ -1,0 +1,63 @@
+<!doctype html>
+<!--
+        ..oooooo.
+     .d8P""    "Y
+    dP"
+    8b.
+     "Y8888bo.   .od888b.  d8P..ooo.   .od888b.  d8P..ooo.
+           "&8 .dP"    YP  ##dP"  Y& .dP"    YP  ##dP"  Y&
+ 	         .YP 88ooooodP  d8P    .dP 88ooooodP  d8P    d8P
+ b..    ..dP"  YP         ##...odP"  YP         ##     ##
+ ""88888P""     &ooooo   d8P""""      &ooooo   d8P    d8P
+                         ##
+                        d8P d88b.
+                        ##  ##""Y8&.
+                       d8P d8P    "Y8&
+                           ##       Y8b
+                .od888b.  d8P       d8P d8P..ooo.   .od888b.   .od88&.   .od88&.   .od888b.  d8P..ooo.           .ooooo.    .ooooo    d8P..ooo...ooo.
+              .dP"    YP  ##       d8P  ##dP"  Y& .dP"    YP .dP"    " .dP"    " .dP"    YP  ##dP"  Y&         .d""    "  .d""   Yb   ##dP"  Y8"  Y#&
+              88ooooodP  d8P  	 .d8P" d8P        88ooooodP  "Yboooo.  "Yboooo.  88ooooodP  d8P         .oo.  dP         dP      dP  d8P    d8P   d8P
+              YP	       ##  ..d8P"    ##         YP        .      Y8 .      Y8  YP         ##         d888P  8b     ..  8b    .dP   ##     ##    ##
+               &ooooo   d88888P""     d8P          &ooooo   "8oood8P  "8oood8P    &ooooo   d8P         Y88P    Y8888P"    Y8888P"   d8P    d8P   d8P
+
+     ____                                              ___                                     ____  ____
+    /   / ___        ___ ___  ___ _      __           /   \        ___           __    ___      /   /   
+   /___/ /  / / / / /__ /__/ /__ / \    /__\ \_/ .   /____/ /\  / / _  /  / /   /__\  /__/     /   /___
+  /     /__/ /_/_/ /__ /  \ /__ /__/   /__/  _/ .   /    / /  \/ /__/ /__/ /__ /   / /  \  /__/   ____/
+
+
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sepen eDresser - Home</title>
+	<link rel="stylesheet" href="css/eDresser.css" type="text/css"></link>
+	<!-- Imported JS APIs -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body ng-app="Main" ng-controller="mainCtrl as ctrl">
+<div id="globalContainer">
+<div id="bg-color"></div>
+<div id="bg-img"></div>
+<div id="container">
+	<div id="pagelet_topbar">
+		<div id="tb-title">{{ pageTitle }}</div>
+	</div>
+	<sidebar data="ctrl.data"></sidebar>
+	<div id="content" ng-view></div>
+</div>
+</div>
+<!--       Angular Modules        -->
+<script src="/js/modules/sidebar/Sidebar.js"></script>
+<script src="/js/modules/sidebar/SidebarBtn.js"></script>
+<script src="/js/modules/sidebar/SidebarBtnMenu.js"></script>
+<script src="/js/modules/SepenEDresserMain.js"></script>
+<!--      Directives      -->
+<!--       Services       -->
+<!-- some jquery -->
+<script src="js/zhaostephen.core.js"></script>
+<script src="js/zhaostephen.eDresserView.js"></script>
+</body>
+</html>
