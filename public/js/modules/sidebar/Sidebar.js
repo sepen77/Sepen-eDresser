@@ -1,4 +1,6 @@
-//Sidebar Module
+//MODULE
+//Sidebar, sidebarCtrl
+//Defines the sidebar element, controls sidebar behavior
 angular.module("Sidebar",[])
 .directive("sidebar", function(){
 	return {
@@ -11,7 +13,7 @@ angular.module("Sidebar",[])
 		controllerAs: "ctrl"
 	};
 })
-.controller("sidebarCtrl", function($scope, pageService){
+.controller("sidebarCtrl", function($scope, pageService, animService){
 	//====  INITIALIZATION  ====
 	$scope.b_sbExpanded = false;
 
@@ -19,7 +21,7 @@ angular.module("Sidebar",[])
 	this.onClick_sbbtn = function(btn){
 		pageName = btn;
 		if ($scope.b_sbExpanded)
-			sbCollapse();
+			animService.sbCollapse();
 		$scope.b_sbExpanded = false;
 		if (pageService.currentPage != pageName)
 			pageService.changePageTo(pageName);
@@ -27,9 +29,9 @@ angular.module("Sidebar",[])
 	
 	this.onClick_sbExpandMenu = function(){
 		if ($scope.b_sbExpanded){
-			sbCollapse();
+			animService.sbCollapse();
 		} else {
-			sbExpand();
+			animService.sbExpand();
 		}
 		$scope.b_sbExpanded = !$scope.b_sbExpanded;
 	};

@@ -1,4 +1,6 @@
-//Sidebar Button Menu Module
+//MODULE
+//SidebarBtnMenu, sidebarBtnMenuCtrl
+//Defines the menu button on the sidebar, controls button behavior
 angular.module("SidebarBtnMenu",[])
 .directive("sidebarBtnMenu", function(){
 	return {
